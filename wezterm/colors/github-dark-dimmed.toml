@@ -1,0 +1,35 @@
+[metadata]
+name = "GitHub Dark Dimmed"
+
+[colors]
+foreground = "#ADBAC7"
+background = "#22272E"
+
+cursor_bg = "#ADBAC7"
+cursor_fg = "#22272E"
+cursor_border = "#ADBAC7"
+
+selection_fg = "#ADBAC7"
+selection_bg = "#444C56"
+
+ansi = [
+  "#22272E", # black
+  "#F47067", # red
+  "#57AB5A", # green
+  "#C69026", # yellow
+  "#539BF5", # blue
+  "#B083F0", # magenta
+  "#39C5CF", # cyan
+  "#ADBAC7", # white
+]
+
+brights = [
+  "#444C56", # bright black
+  "#F47067", # bright red
+  "#57AB5A", # bright green
+  "#C69026", # bright yellow
+  "#539BF5", # bright blue
+  "#B083F0", # bright magenta
+  "#39C5CF", # bright cyan
+  "#CDD9E5", # bright white
+]

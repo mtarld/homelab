@@ -1,0 +1,14 @@
+{
+    "require-dev": {
+        "phpstan/phpstan": "^2.1",
+        "friendsofphp/php-cs-fixer": "^3.92"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "for f in vendor/bin/*; do ln -sf \"$PWD/$f\" \"$HOME/.local/bin/$(basename $f)\"; done"
+        ],
+        "post-update-cmd": [
+            "for f in vendor/bin/*; do ln -sf \"$PWD/$f\" \"$HOME/.local/bin/$(basename $f)\"; done"
+        ]
+    }
+}

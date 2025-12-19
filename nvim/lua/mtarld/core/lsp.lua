@@ -1,0 +1,8 @@
+vim.lsp.enable('lua_ls')
+vim.lsp.enable('phpactor')
+vim.lsp.enable('eslint')
+vim.lsp.enable('ts_ls')
+vim.lsp.enable('html')
+vim.lsp.enable('cssls')
+vim.lsp.enable('yamlls')
+vim.lsp.enable('jsonls')

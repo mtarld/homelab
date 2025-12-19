@@ -1,0 +1,42 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Do not insert blank line between shell prompts
+add_newline = false
+
+# Set GitHub Dark Dimmed theme
+palette = "github_dark_dimmed"
+
+# Set prompt format
+format = '$directory$git_branch${custom.git_dirty} $character'
+
+[character]
+success_symbol = '[\$](bold)'
+error_symbol = '[\$](bold)'
+
+[directory]
+format = "[ $path ]($style)"
+style = "bg:bg1 fg:fg bold"
+
+[git_branch]
+format = "[ $branch ]($style)"
+style = "bold bg:bg2 fg:fg"
+
+[custom.git_dirty]
+when = 'git rev-parse --is-inside-work-tree >/dev/null 2>&1 && ( ! git diff-files --quiet || ! git diff-index --quiet --cached HEAD || [ -n "$(git ls-files -o --exclude-standard)" ] )'
+format = " [\uf440]($style)"
+style = "fg:yellow bold"
+
+[palettes.github_dark_dimmed]
+bg0 = "#22272E"
+bg1 = "#2D333B"
+bg2 = "#444C56"
+fg = "#ADBAC7"
+fg0 = "#CDD9E5"
+muted = "#768390"
+red = "#F47067"
+green = "#57AB5A"
+yellow = "#D0B46F"
+blue = "#539BF5"
+magenta = "#B083F0"
+cyan = "#39C5CF"
+mustard  = "#C69026"

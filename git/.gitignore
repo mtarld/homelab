@@ -1,0 +1,15 @@
+.mtarld
+
+*~
+*.swp
+*.swo
+
+.php-cs-fixer.cache
+.phpunit.result.cache
+
+.phpactor.json
+
+auth.json
+
+.gp.md
+.claude

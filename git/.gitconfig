@@ -1,0 +1,66 @@
+[include]
+    path = ~/.gitconfig.local
+
+[core]
+	editor = vim
+	pager = delta --paging=always
+	excludesfile = ~/homelab/git/.gitignore
+
+[interactive]
+	diffFilter = delta --color-only
+
+[merge]
+	conflictstyle = diff3
+	summary = true
+
+[diff]
+	colorMoved = default
+
+[delta]
+	navigate = true
+	features = unobtrusive-line-numbers
+	hunk-header-style = omit
+
+[delta "unobtrusive-line-numbers"]
+	line-numbers = true
+
+[init]
+	defaultBranch = main
+
+[help]
+	autocorrect = 40
+
+[pull]
+	rebase = true
+
+[alias]
+    a = add
+    ap = add * -p
+    b = branch
+    bc = for-each-ref --format=' %(if)%(HEAD)%(then)%(color:bold)%(HEAD)%(color:green)%(else) %(end) %(refname:short)%(if)%(push)%(then)%(color:white) -> %(color:red)%(push:short)%(end)' refs/heads
+    bd = branch -D
+    bD= "!git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs -r git branch -D"
+    br = for-each-ref refs/remotes/ --format=' %(refname:short)'
+    cam = commit --amend --no-edit
+    c = commit
+    co = checkout
+    cb = checkout -b
+    d = diff
+    fa = fetch --all --prune
+    l = log --graph
+    p = push
+    pf = push --force-with-lease
+    po = "!git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)"
+    rb = rebase
+    rbi = rebase --interactive
+    rba = rebase --abort
+    rbc = rebase --continue
+    rbh = "!f() { git rebase --interactive HEAD~$1; }; f"
+    rbo = "!f() { git rebase --onto $1 HEAD~${2:-1} $(git rev-parse --abbrev-ref HEAD); }; f"
+    rmx = "!git status -s | grep \"??\" | awk -F \" \" '\"'\"'{print $2}'\"'\"' | xargs rm -rf"
+    roh = "!f() { git reset ${1:-origin}/$(git rev-parse --abbrev-ref HEAD) --hard; }; f"
+    rs = reset
+    rsh = reset --hard
+    s = "!git branch --format='%(refname:short)' | fzf --no-info --print0 | xargs -0 -t git checkout"
+    sc = show --pretty=format:%b
+    st = status --short

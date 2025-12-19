@@ -1,0 +1,36 @@
+[theme]
+theme = "semi-native"
+
+[icons]
+icons = "awesome4"
+
+[[block]]
+block = "rofication"
+interval = 1
+socket_path = "/tmp/rofi_notification_daemon"
+[[block.click]]
+button = "left"
+cmd = "ilia -p notifications"
+
+[[block]]
+block = "sound"
+driver = "pulseaudio"
+
+[[block.click]]
+button = "left"
+cmd = "regolith-control-center sound"
+
+[[block]]
+block = "battery"
+format = "$icon $percentage"
+full_format = "full"
+
+[[block]]
+block = "time"
+interval = 5
+format = "$timestamp.datetime(f:'%d/%m')"
+
+[[block]]
+block = "time"
+interval = 5
+format = "$timestamp.datetime(f:'%R')"

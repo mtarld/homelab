@@ -1,0 +1,9 @@
+color:
+  theme: custom
+
+date: '+%d/%m/%y %X'
+
+icons:
+  when: never
+
+size: short
