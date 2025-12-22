@@ -1,4 +1,4 @@
-#define WALLPAPER ~/.config/regolith3/wallpaper-2.jpg
+#define WALLPAPER ~/.config/regolith3/wallpaper.jpg
 #define FONT Agave Nerd Font Mono 15
 
 gtk.document_font_name: FONT
