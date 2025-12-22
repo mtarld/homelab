@@ -64,3 +64,5 @@
     s = "!git branch --format='%(refname:short)' | fzf --no-info --print0 | xargs -0 -t git checkout"
     sc = show --pretty=format:%b
     st = status --short
+[commit]
+	gpgsign = true
