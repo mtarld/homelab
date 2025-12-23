@@ -7,7 +7,7 @@ add_newline = false
 palette = "github_dark_dimmed"
 
 # Set prompt format
-format = '$directory$git_branch${custom.git_dirty} $character'
+format = '$directory$git_branch${custom.git_dirty}${custom.git_sync} $character'
 
 [character]
 success_symbol = '[\$](bold)'
@@ -25,6 +25,16 @@ style = "bold bg:bg2 fg:fg"
 when = 'git rev-parse --is-inside-work-tree >/dev/null 2>&1 && ( ! git diff-files --quiet || ! git diff-index --quiet --cached HEAD || [ -n "$(git ls-files -o --exclude-standard)" ] )'
 format = " [\uf440]($style)"
 style = "fg:yellow bold"
+
+[custom.git_sync]
+when = '''
+git rev-parse --is-inside-work-tree >/dev/null 2>&1 \
+&& git rev-parse --abbrev-ref --symbolic-full-name @{u} >/dev/null 2>&1 \
+&& [ "$(git rev-list --left-right --count HEAD...@{u} | awk "{print \$1}")" = "0" ] \
+&& [ "$(git rev-list --left-right --count HEAD...@{u} | awk "{print \$2}")" = "0" ]
+'''
+format = " [●]($style)"
+style = "fg:green bold"
 
 [palettes.github_dark_dimmed]
 bg0 = "#22272E"
