@@ -17,7 +17,7 @@ config.font = wezterm.font({
   family = "Agave Nerd Font Mono",
   weight = "Regular",
 })
-config.font_size = 17.0
+config.font_size = 18.0
 config.line_height = 1.2
 config.cell_width = 0.9
 config.adjust_window_size_when_changing_font_size = false
