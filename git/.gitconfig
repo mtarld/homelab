@@ -47,7 +47,7 @@
     cb = checkout -b
     d = diff
     fa = fetch --all --prune
-    l = log --graph
+    l = log --oneline --color -20 --decorate
     lw = "!watch -t -n 1 --color 'git --no-pager log --oneline --color -20 --decorate'"
     p = push
     pf = push --force-with-lease
