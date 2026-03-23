@@ -17,9 +17,16 @@ select-word-style bash
 bindkey '\e[1;5D' backward-word
 bindkey '\e[1;5C' forward-word
 
-# Load nvm
+# Lazy-load nvm (defers ~200ms of shell startup)
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+_lazy_nvm() {
+  unset -f nvm node npm npx
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+}
+nvm() { _lazy_nvm; nvm "$@"; }
+node() { _lazy_nvm; node "$@"; }
+npm() { _lazy_nvm; npm "$@"; }
+npx() { _lazy_nvm; npx "$@"; }
 
 # Load brew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -37,5 +44,5 @@ source ~/homelab/zsh/aliases.zsh
 # Load Symfony CLI completions
 source ~/.symfony_completion
 
-# Load fzf
-source <(fzf --zsh)
+# Load fzf (pre-generated to avoid subprocess on every shell start)
+source ~/.fzf-completion.zsh
