@@ -1,0 +1,36 @@
+[[themes]]
+name = "github_dark_dimmed"
+
+[themes.palette]
+background = "#22272E"
+foreground = "#ADBAC7"
+black = "#22272E"
+red = "#F47067"
+green = "#57AB5A"
+yellow = "#D0B46F"
+blue = "#539BF5"
+magenta = "#B083F0"
+cyan = "#39C5CF"
+white = "#CDD9E5"
+bright_black = "#768390"
+bright_red = "#F47067"
+bright_green = "#57AB5A"
+bright_yellow = "#D0B46F"
+bright_blue = "#539BF5"
+bright_magenta = "#B083F0"
+bright_cyan = "#39C5CF"
+bright_white = "#CDD9E5"
+
+[themes.component_style]
+block_title = { fg = "Yellow", modifiers = ["Bold"] }
+border = {}
+playback_track = { fg = "White", modifiers = ["Bold"] }
+playback_artists = { fg = "Yellow" }
+playback_album = { fg = "Cyan" }
+playback_metadata = { fg = "BrightBlack" }
+playback_progress_bar = { bg = "#2D333B", fg = "Yellow" }
+current_playing = { fg = "Yellow", modifiers = ["Bold"] }
+page_desc = { fg = "Cyan", modifiers = ["Bold"] }
+playlist_desc = { fg = "BrightBlack" }
+table_header = { fg = "Cyan" }
+selection = { bg = "#2D333B", modifiers = ["Bold"] }
