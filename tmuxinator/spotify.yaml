@@ -1,0 +1,4 @@
+name: spotify
+
+windows:
+  - player: spotify_player
