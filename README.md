@@ -240,6 +240,8 @@ https://github.com/aome510/spotify-player
 
 ```sh
 brew install spotify_player
+ln -s ~/homelab/spotify/app.toml ~/.config/spotify-player/app.toml
+ln -s ~/homelab/spotify/theme.toml ~/.config/spotify-player/theme.toml
 ```
 
 ### Xclip
