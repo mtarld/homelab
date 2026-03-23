@@ -3,6 +3,9 @@
 # Do not insert blank line between shell prompts
 add_newline = false
 
+# Timeout for custom commands (ms) - prevents slow prompts in large repos
+command_timeout = 500
+
 # Set GitHub Dark Dimmed theme
 palette = "github_dark_dimmed"
 
