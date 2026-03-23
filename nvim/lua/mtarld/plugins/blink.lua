@@ -1,5 +1,6 @@
 return {
   'saghen/blink.cmp',
+  version = '1.*',
   lazy = false, -- lazy loading handled internally
   opts_extend = { "sources.default" },
   opts = {
@@ -17,8 +18,8 @@ return {
         },
       },
     },
-    sources = {
-      cmdline = function()
+    cmdline = {
+      sources = function()
         local type = vim.fn.getcmdtype()
 
         if type == ':' or type == '@' then
