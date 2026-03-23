@@ -1,6 +1,5 @@
 return {
   'saghen/blink.cmp',
-  version = 'v0.11.0',
   lazy = false, -- lazy loading handled internally
   opts_extend = { "sources.default" },
   opts = {
