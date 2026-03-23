@@ -7,4 +7,4 @@ windows:
       panes:
         - sleep 0.2 && clear && nvim
         - sleep 0.2 && clear
-        - watch -t -n 1 --color "git --no-pager log --oneline --color -20 --decorate"
+        - watch -t -n 5 --color "git --no-pager log --oneline --color -20 --decorate"
