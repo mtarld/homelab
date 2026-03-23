@@ -98,6 +98,7 @@ https://github.com/junegunn/fzf
 ```sh
 sudo apt update
 sudo apt install fzf
+fzf --zsh > ~/.fzf-completion.zsh
 ```
 
 ### Git
@@ -134,8 +135,7 @@ ln -s ~/homelab/lsd ~/.config/lsd
 https://neovim.io
 
 ```sh
-sudo apt update
-sudo apt install neovim
+brew install neovim
 ln -s ~/homelab/nvim ~/.config/nvim
 ```
 
@@ -233,6 +233,13 @@ sudo chmod 644 /usr/share/keyrings/wezterm-fury.gpg
 sudo apt update
 sudo apt install wezterm
 ln -s ~/homelab/wezterm/.wezterm.lua ~/.wezterm.lua
+```
+
+### Spotify player
+https://github.com/aome510/spotify-player
+
+```sh
+brew install spotify_player
 ```
 
 ### Xclip
