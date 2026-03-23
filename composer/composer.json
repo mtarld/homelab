@@ -10,5 +10,8 @@
         "post-update-cmd": [
             "for f in vendor/bin/*; do ln -sf \"$PWD/$f\" \"$HOME/.local/bin/$(basename $f)\"; done"
         ]
+    },
+    "require": {
+        "psalm/phar": "@stable"
     }
 }
