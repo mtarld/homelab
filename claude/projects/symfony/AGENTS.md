@@ -6,8 +6,9 @@ All changes must respect the BC promise (https://symfony.com/doc/current/contrib
 
 Never:
 - Remove or rename public/protected methods, properties, or constants
-- Change method signatures (parameter types, return types, parameter count)
+- Change method signatures (parameter types, return types)
 - Add required parameters to existing methods
+- Add optional parameters to existing methods (except on the last minor branch, where adding an optional parameter with a default value at the last position is allowed)
 - Make a class final or abstract after its initial release
 - Reduce visibility of properties or methods
 - Introduce a new class/interface/trait/method as deprecated
