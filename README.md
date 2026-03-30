@@ -252,6 +252,19 @@ sudo apt update
 sudo apt install xclip
 ```
 
+### Claude Code
+https://claude.ai/code
+
+```sh
+npm install -g @anthropic-ai/claude-code
+ln -s ~/homelab/claude/AGENTS.md ~/.claude/AGENTS.md
+ln -s ~/homelab/claude/settings.json ~/.claude/settings.json
+mkdir -p ~/.claude/agents ~/.claude/skills
+ln -s ~/homelab/claude/agents/review.md ~/.claude/agents/review.md
+ln -s ~/homelab/claude/skills/simplify ~/.claude/skills/simplify
+ln -s ~/homelab/claude/skills/implement ~/.claude/skills/implement
+```
+
 ### Zsh
 https://en.wikipedia.org/wiki/Z_shell
 https://github.com/zsh-users/zsh-syntax-highlighting
@@ -260,4 +273,5 @@ https://github.com/zsh-users/zsh-syntax-highlighting
 sudo apt update
 sudo apt install zsh zsh-syntax-highlighting
 ln -s ~/homelab/zsh/.zshrc ~/.zshrc
+ln -s ~/homelab/zsh/.zshenv ~/.zshenv
 ```
