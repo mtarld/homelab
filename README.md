@@ -263,6 +263,7 @@ mkdir -p ~/.claude/agents ~/.claude/skills
 ln -s ~/homelab/claude/agents/review.md ~/.claude/agents/review.md
 ln -s ~/homelab/claude/skills/simplify ~/.claude/skills/simplify
 ln -s ~/homelab/claude/skills/implement ~/.claude/skills/implement
+ln -s ~/homelab/claude/skills/talk ~/.claude/skills/talk
 ```
 
 ### Zsh
