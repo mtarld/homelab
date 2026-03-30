@@ -1,14 +1,3 @@
-# Set VIM as default editor
-export EDITOR="vim"
-
-# Apply theme on fzf
-export FZF_DEFAULT_OPTS="--tmux --color=info:#768390,bg+:#2d333b,border:#768390,gutter:#22272e,prompt:#d0b46f,pointer:#d0b46f"
-
-# Set starship config location
-export STARSHIP_CONFIG=~/homelab/starship/starship.toml
-
-export TMUXINATOR_CONFIG=~/homelab/tmuxinator/
-
 # Make word deletion behaves like bash
 autoload -Uz select-word-style
 select-word-style bash
@@ -18,7 +7,6 @@ bindkey '\e[1;5D' backward-word
 bindkey '\e[1;5C' forward-word
 
 # Lazy-load nvm (defers ~200ms of shell startup)
-export NVM_DIR="$HOME/.nvm"
 _lazy_nvm() {
   unset -f nvm node npm npx
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
