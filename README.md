@@ -135,7 +135,7 @@ ln -s ~/homelab/lsd ~/.config/lsd
 https://neovim.io
 
 ```sh
-brew install neovim
+brew install neovim tree-sitter-cli
 ln -s ~/homelab/nvim ~/.config/nvim
 ```
 
