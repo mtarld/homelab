@@ -62,7 +62,7 @@
     roh = "!f() { git reset ${1:-origin}/$(git rev-parse --abbrev-ref HEAD) --hard; }; f"
     rs = reset
     rsh = reset --hard
-    s = "!git branch --format='%(refname:short)' | fzf --no-info --print0 | xargs -0 -t git checkout"
+    s = "!f() { if [ -z \"$1\" ]; then git branch --format='%(refname:short)' | fzf --no-info --print0 | xargs -0 -t git checkout; elif git show-ref --verify --quiet refs/heads/\"$1\" 2>/dev/null; then git checkout \"$1\"; else branch=$(git for-each-ref --sort=-committerdate refs/heads/ --format='%(refname:short)' | fzf --no-info --select-1 --exit-0 -q \"$1\"); if [ -n \"$branch\" ]; then git checkout \"$branch\"; else echo \"No matching branch found.\"; fi; fi; }; f"
     sc = show --pretty=format:%b
     st = status --short
 [commit]
