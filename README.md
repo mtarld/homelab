@@ -212,6 +212,7 @@ https://github.com/tmux/tmux
 sudo apt update
 sudo apt install tmux
 ln -s ~/homelab/tmux/.tmux.conf ~/.tmux.conf
+ln -s ~/homelab/tmux/battery.sh ~/.config/battery.sh
 ```
 
 ### Tmuxinator
