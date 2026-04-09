@@ -11,5 +11,8 @@
   "language_server_php_cs_fixer.enabled": true,
   "language_server_php_cs_fixer.bin": "php-cs-fixer",
   "language_server_php_cs_fixer.show_diagnostics": true,
-  "language_server.diagnostic_outsource": true
+  "language_server.diagnostic_outsource": true,
+  "worse_reflection.additive_stubs": [
+    ".castor.stub.php"
+  ]
 }
