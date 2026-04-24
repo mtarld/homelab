@@ -73,5 +73,8 @@
     "context7@claude-plugins-official": true,
     "php-lsp@claude-plugins-official": true
   },
-  "alwaysThinkingEnabled": true
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "xhigh",
+  "skipDangerousModePermissionPrompt": true,
+  "agentPushNotifEnabled": true
 }
